@@ -18,7 +18,9 @@ function profileInfo() {
     contentProfile.style.animation = "movimientoProfile 2.5s linear"
 }
 let profile = document.getElementById("profile");
+let profileCel = document.getElementById("profileCel");
 profile.addEventListener('click',profileInfo);
+profileCel.addEventListener('click',profileInfo);
 // fin Boton Profile
 
 
@@ -64,7 +66,9 @@ function skillsInfo() {
 }
 
 let skills = document.getElementById("skills");
+let skillsCel = document.getElementById("skillsCel");
 skills.addEventListener('click',skillsInfo);
+skillsCel.addEventListener('click',skillsInfo);
 //fin boton skills
 
 
@@ -76,14 +80,30 @@ function proyectsInfo() {
         contenido.removeChild(contenido.firstChild);
     }
     let contentProyects = document.createElement("div");
+    let link1 = document.createElement("a");
+    let link2 = document.createElement("a");
+    let link3 = document.createElement("a");
+    let link4 = document.createElement("a");
+    contentProyects.setAttribute('class','contentImgProyects')
     contenido.appendChild(contentProyects);
-    let parrafo = document.createElement("p");
-    parrafo.innerText = `Aqui van los links para mis proyectos`;
-    contentProyects.appendChild(parrafo);
+    let article = document.createElement("article");
+    article.innerHTML = `<a class="linkImege" href="https://lavish-private-fire.glitch.me/"> <img class="tamañoImagen" src="https://www.muycomputer.com/wp-content/uploads/2020/12/demanda-contra-Google.png" alt="clon de google"> </a>`;
+    let article2 = document.createElement("article");
+    article2.innerHTML = `<a class="linkImege" href="https://adaptable-peppered-ox.glitch.me/"> <img class="tamañoImagen" src="https://neilpatel.com/wp-content/uploads/2017/09/Pinterest.jpg" alt="clon de google"> </a>`;
+    let article3 = document.createElement("article");
+    article3.innerHTML = `<a class="linkImege" href="https://continuous-verbena-mammal.glitch.me/"> <img class="tamañoImagen" src="https://media.istockphoto.com/photos/keypad-numbers-picture-id153759031?k=20&m=153759031&s=612x612&w=0&h=qWvGwGaSFDFRf9e-heUVVZn6sF4FDWo7IQSpKv3ic5g=" alt="clon de google"> </a>`;
+    let article4 = document.createElement("article");
+    article4.innerHTML = `<a class="linkImege" href="https://abaft-splendid-cicada.glitch.me/"> <img class="tamañoImagen" src="https://marisolgbarrios.files.wordpress.com/2012/11/tabla.gif" alt="clon de google"> </a>`;
+    contentProyects.appendChild(article);
+    contentProyects.appendChild(article2);
+    contentProyects.appendChild(article3);
+    contentProyects.appendChild(article4);
     contentProyects.style.animation = "movimientoProfile 2.5s linear"
 }
 let proyects = document.getElementById("proyects");
+let proyectsCel = document.getElementById("proyectsCel");
 proyects.addEventListener('click',proyectsInfo);
+proyectsCel.addEventListener('click',proyectsInfo);
 // fin Boton Profile
 
 

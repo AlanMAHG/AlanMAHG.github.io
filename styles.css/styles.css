@@ -9,8 +9,6 @@ body{
 }
 header{
     background-color: rgb(90, 90, 233);
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 15px;
     color: white;
     height: 10vh;
     width: 100vw;
@@ -27,9 +25,12 @@ main{
     display: flex;
     flex-direction: row;
     height: 90vh;
+    position: relative;
     width: 100vw;
+    z-index: 5;
 }
 main #menu{
+    background-color: rgb(90, 90, 233);
     border-right-style: inset;
     display: flex;
     flex-direction: column;
@@ -49,8 +50,8 @@ main #menu a{
     margin-bottom: 3px;
 }
 main #menu a:hover{
-    background-color: rgb(90, 90, 233);
-    color: white;
+    background-color: white;
+    color: rgb(90, 90, 233);
 }
 main #contenido{
     display: flex;
@@ -60,6 +61,44 @@ main #contenido{
 main #contenido #animation{
     animation: movimiento 2.5s linear infinite;
 }
+main .menuCel{
+    
+    background-color: rgb(90, 90, 233);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0 3px 30px ;
+    position: absolute;
+    bottom: 2rem;
+    left: 6rem;
+    width: 16rem;
+    display: none;
+}
+.menuCel a{
+    color: black;
+    font-size: .7rem;
+    text-decoration: none;
+}
+.menuCel a:hover{
+    background: white;
+    border-radius: 20px;
+    padding: 3px;
+    color: rgb(90, 90, 233);;
+}
+.contentImgProyects{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.tamañoImagen{
+    height: 6rem;
+    width: 7rem;
+}
+
+
+/* efectos movimiento */
 
 @keyframes movimiento{
     0%{
@@ -88,6 +127,67 @@ main #contenido #animation{
         
     }
 }
+
+
+
+
+
+/* responsividad */
+
+@media screen and (max-width: 380px) {
+    header{
+        height: 12vh;
+    }
+    header h1{
+        font-size: 1rem;
+        padding-left: 0px;
+    }
+    #animation img{
+        height: 120px;
+        width: 280px;
+    }
+    div article svg{
+        height: 4rem !important;
+        width: 4rem !important;
+    }
+    main .menuCel{
+        left: 300px;
+        width: 14rem;
+    }
+    .menuCel a{
+        font-size: .6rem;
+    }
+}
+@media screen and (max-width: 440px) {
+    main .menuCel{
+        left: 4.3rem;
+    }
+}
+@media screen and (max-width: 470px){
+    .contentImgProyects{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 500px) {
+    main #menu{
+        display: none;
+    }
+    main .menuCel{
+        display: inline;
+    }
+}
+@media screen and (max-width: 740px) {
+    main #menu{
+        margin: 0;
+        padding: 5px;
+        width: 20%;
+    }
+    main #contenido{
+        width: 80%;
+    }
+}
+
+
 
 
 
