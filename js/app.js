@@ -11,7 +11,7 @@ function profileInfo() {
     let contentProfile = document.createElement("div");
     contenido.appendChild(contentProfile);
     let parrafo = document.createElement("p");
-    parrafo.innerText = `Proactive front-end student, always willing to learn and develop skills within the software development field.
+    parrafo.innerText = `Proactive front-end, always willing to learn and develop skills within the software development field.
     My previous experience in various fields of work, has helped me in increasing my ability to adapt quickly to a challenging environment and deliver excellent results.
     Concerning myself, I am serious but with the ability to integrate easily into a group. I also enjoy learning and sharing what I have learned, traveling, playing chess and practicing juggling.`;
     contentProfile.appendChild(parrafo);
